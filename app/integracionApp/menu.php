@@ -33,7 +33,7 @@
         <a href="indexIntegracion.php">Anuarios ESCOM</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="gestionarGeneraciones.php"><i class="material-icons left">school</i>Gestionar Generaciones</a></li>
-            <li><a href="consultarPerfil.php"><i class="material-icons right">account_circle</i><?php echo $empleadoIntegracion->getNombreEmpleado() ?></a></li>
+            <li><a href="consultarPerfil/consultarPerfil.php"><i class="material-icons right">account_circle</i><?php echo $empleadoIntegracion->getNombreEmpleado() ?></a></li>
             <li><a href="php/logout.php" class="waves-effect waves-light btn #1565c0 blue darken-3">Cerrar Sesión</a></li>
         </ul>
     </div>

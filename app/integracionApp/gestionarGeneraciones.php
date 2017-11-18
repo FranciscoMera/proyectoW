@@ -29,11 +29,51 @@ if(!isset($_SESSION['idUserName'])||!isset($_SESSION['userName'])||!isset($_SESS
     <script type="text/javascript" src="../../js/validetta.min.js"></script>
 
 </head>
-<body background="img/escom.jpg" style="background-repeat: no-repeat;background-position: center;background-attachment: fixed;">
+<body>
 
 <?php
 include_once('menu.php');
 ?>
+    <div class="row">
+        <div class="col 4 offset-l4">
+            <h1 class="indigo-text" style="font-weight: bolder">Gestionar Graduaciones</h1>
+        </div>
+    <div class="row">
+        <div class="col 3 offset-l7">
+            <a class="btn waves-light #1565c0 blue darken-3" href="registrarGeneracionForm.php"><i class="material-icons left">class</i> Registrar Graduaci&oacute;n</a>
+        </div>
+    </div>
+
+    </div>
+    <div class="row">
+        <table class="col s6 offset-l3 highlight stripped bordered">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre de Generación</th>
+                <th>Gestionar Eventos</th>
+                <th>Gestionar Alumnos</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php
+                    require_once ('../config/config.php');
+                    $sql  =  "SELECT * FROM tgn01_generacion";
+                    if($result = mysqli_query($con,$sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            /*Mostrar cada fila del resultado*/
+                        }else{
+                           echo "<script>Materialize.toast('No hay generaciones registradas',2000)</script>";
+                        }
+                    }
+
+                ?>
+            </tbody>
+        </table>
+    </div>
+
 
 
 
